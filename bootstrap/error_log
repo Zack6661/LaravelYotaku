@@ -1,0 +1,4 @@
+[21-Aug-2024 15:36:44 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/fawwazhe/yotakushop.fawwazhere.my.id/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/fawwazhe/yotakushop.fawwazhere.my.id/bootstrap/app.php on line 14

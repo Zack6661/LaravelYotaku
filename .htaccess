@@ -1,0 +1,17 @@
+Options -Indexes 
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirect requests to /public folder
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ /public/$1 [L,NC]
+
+    # Hide /public/index.php from URL
+    RewriteCond %{REQUEST_URI} !^/public/index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ public/index.php [L]
+</IfModule>
+
+# Ensure that index.php is the default file
+DirectoryIndex index.php
